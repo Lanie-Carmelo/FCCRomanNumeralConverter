@@ -5,10 +5,10 @@ const outputText = document.getElementById("output");
 convertBtn.addEventListener("click", () => {
     checkUserInput(numberInput);
 });
-numberInput.addEventListener("keydown", () => {
-    if (KeyboardEvent.name === "Enter") {
+numberInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
         checkUserInput(numberInput);
-    }
+    };
 });
 
 const checkUserInput = numberInput => {
